@@ -9,11 +9,3 @@ public class CreatePurchaseOrderCommandHandler : IRequestHandler<CreatePurchaseO
         return Task.FromResult(new Unit());
     }
 }
-
-public record CreatePurchaseOrderCommandRequest : IRequest<Unit>
-{
-    public int PurchaseOrderId { get; set; }
-    public decimal TotalPrice { get; set; }
-    public int CustomerId { get; set; }
-    public List<string> ItemLines { get; set; } = new();
-}
