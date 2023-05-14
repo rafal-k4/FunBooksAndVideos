@@ -23,11 +23,14 @@ public class CreatePurchaseOrderCommandHandler : IRequestHandler<CreatePurchaseO
             new Membership(1, MembershipType.BookClub),
             new List<Product>
             {
-                new Product(0, "book", ProductType.Physical),
-                new Product(1, "video", ProductType.Digital)
+                new Product(1, "book", ProductType.Physical),
+                new Product(2, "video", ProductType.Digital)
             });
 
         await _purchaseOrderRepository.CreateAsync(purchaseOrder, cancellationToken);
+
+
+        //var po = await _purchaseOrderRepository.GetAsync(request.PurchaseOrderId, cancellationToken);
 
         return new Unit();
     }

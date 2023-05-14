@@ -8,7 +8,9 @@ public class Membership : BaseEntity<int>
     
     public Membership(int id, MembershipType productType)
     {
-        Id = Id;
+        Id = id;
         MembershipType = productType;
     }
+
+    private Membership() { } // EF required
 }

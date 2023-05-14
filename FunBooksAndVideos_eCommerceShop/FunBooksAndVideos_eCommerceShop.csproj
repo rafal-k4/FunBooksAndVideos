@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FunBooksAndVideos.Application\FunBooksAndVideos.Application.csproj" />
+    <ProjectReference Include="..\FunBooksAndVideos.Infrastructure\FunBooksAndVideos.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

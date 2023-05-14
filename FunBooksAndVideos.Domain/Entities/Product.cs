@@ -13,4 +13,6 @@ public class Product : BaseEntity<int>
         ProductName = productName;
         ProductType = productType;
     }
+
+    private Product() { } // EF required
 }

@@ -18,4 +18,6 @@ public class PurchaseOrder : BaseEntity<int>, IAggregateRoot
         Membership = membership;
         ItemLines = itemLines;
     }
+
+    private PurchaseOrder() { } // EF required
 }
