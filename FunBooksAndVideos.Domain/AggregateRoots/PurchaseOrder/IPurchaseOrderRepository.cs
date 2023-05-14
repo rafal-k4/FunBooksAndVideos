@@ -1,4 +1,4 @@
-﻿namespace FunBooksAndVideos.Domain.AggregateRoots;
+﻿namespace FunBooksAndVideos.Domain.AggregateRoots.PurchaseOrder;
 
 public interface IPurchaseOrderRepository
 {

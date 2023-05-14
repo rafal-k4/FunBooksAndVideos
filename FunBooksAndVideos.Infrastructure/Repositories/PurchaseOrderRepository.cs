@@ -1,4 +1,4 @@
-﻿using FunBooksAndVideos.Domain.AggregateRoots;
+﻿using FunBooksAndVideos.Domain.AggregateRoots.PurchaseOrder;
 
 namespace FunBooksAndVideos.Infrastructure.Repositories;
 

@@ -2,7 +2,7 @@
 using FunBooksAndVideos.Domain.Entities;
 using FunBooksAndVideos.Domain.SharedKernel;
 
-namespace FunBooksAndVideos.Domain.AggregateRoots;
+namespace FunBooksAndVideos.Domain.AggregateRoots.PurchaseOrder;
 
 public class PurchaseOrder : BaseEntity<int>, IAggregateRoot
 {

@@ -1,5 +1,5 @@
 using FunBooksAndVideos.Application;
-using FunBooksAndVideos.Domain.AggregateRoots;
+using FunBooksAndVideos.Domain.AggregateRoots.PurchaseOrder;
 using FunBooksAndVideos.Infrastructure;
 using FunBooksAndVideos.Infrastructure.Repositories;
 

@@ -1,6 +1,4 @@
-﻿using FunBooksAndVideos.Domain.AggregateRoots;
-using FunBooksAndVideos.Domain.Entities;
-using FunBooksAndVideos.Domain.SharedKernel;
+﻿using FunBooksAndVideos.Domain.AggregateRoots.PurchaseOrder;
 using MediatR;
 
 namespace FunBooksAndVideos.Application.Commands;
@@ -24,6 +22,7 @@ public class CreatePurchaseOrderCommandHandler : IRequestHandler<CreatePurchaseO
         purchaseOrder.ProcessOrder(request.ItemLines);
 
         await _purchaseOrderRepository.CreateAsync(purchaseOrder, cancellationToken);
+        var po = await _purchaseOrderRepository.GetAsync(request.PurchaseOrderId, cancellationToken);
 
         return new Unit();
     }
