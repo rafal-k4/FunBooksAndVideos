@@ -2,6 +2,6 @@
 
 public enum ProductType
 {
-    Physical = 1,
-    Digital
+    Book = 1,
+    Video
 }
