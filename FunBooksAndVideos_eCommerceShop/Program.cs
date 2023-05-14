@@ -4,6 +4,7 @@ using FunBooksAndVideos.Domain.AggregateRoots.PurchaseOrder;
 using FunBooksAndVideos.Infrastructure;
 using FunBooksAndVideos.Infrastructure.Repositories;
 using MassTransit;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,11 @@ builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(IMedi
 builder.Services.AddScoped<OrdersDbContext>();
 builder.Services.AddScoped<IPurchaseOrderRepository, PurchaseOrderRepository>();
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+
+builder.Services.AddDbContext<OrdersDbContext>(options =>
+{
+    options.UseInMemoryDatabase("InMemory-TestDB");
+});
 
 builder.Services.AddMassTransit(x =>
 {

@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunBooksAndVideos_eCommerceShop", "FunBooksAndVideos_eCommerceShop\FunBooksAndVideos_eCommerceShop.csproj", "{CC11CBFD-73DC-45F6-AF06-7A116095AFCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunBooksAndVideos_eCommerceShop", "FunBooksAndVideos_eCommerceShop\FunBooksAndVideos_eCommerceShop.csproj", "{CC11CBFD-73DC-45F6-AF06-7A116095AFCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunBooksAndVideos.Application", "FunBooksAndVideos.Application\FunBooksAndVideos.Application.csproj", "{632D05D1-8ED3-4F75-9B2E-554AD3D3972B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunBooksAndVideos.Application", "FunBooksAndVideos.Application\FunBooksAndVideos.Application.csproj", "{632D05D1-8ED3-4F75-9B2E-554AD3D3972B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunBooksAndVideos.Domain", "FunBooksAndVideos.Domain\FunBooksAndVideos.Domain.csproj", "{4E2118D3-9C1B-4DA4-BE16-C890A411C636}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunBooksAndVideos.Domain", "FunBooksAndVideos.Domain\FunBooksAndVideos.Domain.csproj", "{4E2118D3-9C1B-4DA4-BE16-C890A411C636}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunBooksAndVideos_eCommerceShop.Tests", "FunBooksAndVideos_eCommerceShop.Tests\FunBooksAndVideos_eCommerceShop.Tests.csproj", "{E549B664-8521-4382-A88F-78BEF5B798E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunBooksAndVideos_eCommerceShop.Tests", "FunBooksAndVideos_eCommerceShop.Tests\FunBooksAndVideos_eCommerceShop.Tests.csproj", "{E549B664-8521-4382-A88F-78BEF5B798E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunBooksAndVideos.Infrastructure", "FunBooksAndVideos.Infrastructure\FunBooksAndVideos.Infrastructure.csproj", "{EBCC7AF3-C4C4-45D9-987C-2040DB7C7B8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunBooksAndVideos.Infrastructure", "FunBooksAndVideos.Infrastructure\FunBooksAndVideos.Infrastructure.csproj", "{EBCC7AF3-C4C4-45D9-987C-2040DB7C7B8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunBooksAndVideos_eCommerceShop.Tests.Integration", "FunBooksAndVideos_eCommerceShop.Tests.Integration\FunBooksAndVideos_eCommerceShop.Tests.Integration.csproj", "{5C1DE5CC-4B34-4F15-8676-6255DCD99B46}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{EBCC7AF3-C4C4-45D9-987C-2040DB7C7B8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBCC7AF3-C4C4-45D9-987C-2040DB7C7B8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBCC7AF3-C4C4-45D9-987C-2040DB7C7B8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C1DE5CC-4B34-4F15-8676-6255DCD99B46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C1DE5CC-4B34-4F15-8676-6255DCD99B46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C1DE5CC-4B34-4F15-8676-6255DCD99B46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C1DE5CC-4B34-4F15-8676-6255DCD99B46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

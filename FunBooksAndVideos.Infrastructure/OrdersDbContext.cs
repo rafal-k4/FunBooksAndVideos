@@ -13,14 +13,11 @@ public class OrdersDbContext : DbContext
 
     private IMediator _mediator;
 
-    public OrdersDbContext(IMediator mediator)
+    public OrdersDbContext(DbContextOptions<OrdersDbContext> options, IMediator mediator)
+        :base(options)
     {
         _mediator = mediator;
     }
-
-
-    protected override void OnConfiguring(DbContextOptionsBuilder options)
-        => options.UseInMemoryDatabase(databaseName: "FunBooksAndVideos");
 
     public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {
