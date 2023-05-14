@@ -1,4 +1,5 @@
 using FunBooksAndVideos.Application;
+using FunBooksAndVideos.Domain.AggregateRoots.Customer;
 using FunBooksAndVideos.Domain.AggregateRoots.PurchaseOrder;
 using FunBooksAndVideos.Infrastructure;
 using FunBooksAndVideos.Infrastructure.Repositories;
@@ -16,6 +17,7 @@ builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(IMedi
 
 builder.Services.AddScoped<OrdersDbContext>();
 builder.Services.AddScoped<IPurchaseOrderRepository, PurchaseOrderRepository>();
+builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 
 var app = builder.Build();
 

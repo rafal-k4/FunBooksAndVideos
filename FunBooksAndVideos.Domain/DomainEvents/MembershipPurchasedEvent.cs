@@ -2,12 +2,14 @@
 
 namespace FunBooksAndVideos.Domain.DomainEvents;
 
-internal class MembershipPurchasedEvent : BaseDomainEvent
+public class MembershipPurchasedEvent : BaseDomainEvent
 {
-    public string MemebrshipName { get; }
+    public string MembershipName { get; }
+    public int CustomerId { get; set; }
 
-    public MembershipPurchasedEvent(string membershipName)
+    public MembershipPurchasedEvent(string membershipName, int customerId)
     {
-        MemebrshipName = membershipName;
+        MembershipName = membershipName;
+        CustomerId = customerId;
     }
 }

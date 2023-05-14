@@ -2,7 +2,7 @@
 
 namespace FunBooksAndVideos.Application.Commands;
 
-public record CreatePurchaseOrderCommandRequest : IRequest<Unit>
+public record CreatePurchaseOrderCommandRequest : IRequest
 {
     public int PurchaseOrderId { get; set; }
     public decimal TotalPrice { get; set; }

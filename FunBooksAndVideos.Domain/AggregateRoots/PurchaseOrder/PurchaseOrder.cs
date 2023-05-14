@@ -8,7 +8,6 @@ public class PurchaseOrder : BaseEntity<int>, IAggregateRoot
 {
     public decimal TotalPrice { get; private set; }
     public int CustomerId { get; set; }
-    public Membership Membership { get; set; }
     public List<Product> ItemLines { get; set; } = new();
 
     public PurchaseOrder(int id, decimal totalPrice, int customerId)
@@ -26,7 +25,7 @@ public class PurchaseOrder : BaseEntity<int>, IAggregateRoot
         {
             if (item.Contains("membership", StringComparison.OrdinalIgnoreCase))
             {
-                Events.Add(new MembershipPurchasedEvent(item));
+                Events.Add(new MembershipPurchasedEvent(item, CustomerId));
                 continue;
             }
 
