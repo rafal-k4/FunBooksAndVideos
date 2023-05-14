@@ -3,6 +3,7 @@ using FunBooksAndVideos.Domain.AggregateRoots.Customer;
 using FunBooksAndVideos.Domain.AggregateRoots.PurchaseOrder;
 using FunBooksAndVideos.Infrastructure;
 using FunBooksAndVideos.Infrastructure.Repositories;
+using MassTransit;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +19,15 @@ builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(IMedi
 builder.Services.AddScoped<OrdersDbContext>();
 builder.Services.AddScoped<IPurchaseOrderRepository, PurchaseOrderRepository>();
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+
+builder.Services.AddMassTransit(x =>
+{
+    //x.SetKebabCaseEndpointNameFormatter();
+    x.UsingInMemory((context, cfg) =>
+    {
+        cfg.ConfigureEndpoints(context);
+    });
+});
 
 var app = builder.Build();
 

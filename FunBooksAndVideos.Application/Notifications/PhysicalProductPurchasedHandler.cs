@@ -1,13 +1,21 @@
-﻿using FunBooksAndVideos.Domain.DomainEvents;
+﻿using FunBooksAndVideos.Application.MessagesContracts;
+using FunBooksAndVideos.Domain.DomainEvents;
+using MassTransit;
 using MediatR;
 
 namespace FunBooksAndVideos.Application.Notifications;
 
 public class PhysicalProductPurchasedHandler : INotificationHandler<PhysicalProductPurchasedEvent>
 {
-    public Task Handle(PhysicalProductPurchasedEvent notification, CancellationToken cancellationToken)
+    private readonly IBus _bus;
+
+    public PhysicalProductPurchasedHandler(IBus bus)
     {
-        ;
-        return Task.CompletedTask;
+        _bus = bus;
+    }
+
+    public async Task Handle(PhysicalProductPurchasedEvent notification, CancellationToken cancellationToken)
+    {
+        await _bus.Publish(new PhysicalProductOrdered { ProductName = notification.ProductName }, cancellationToken);
     }
 }
