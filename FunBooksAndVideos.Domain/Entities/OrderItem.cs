@@ -2,6 +2,13 @@
 
 namespace FunBooksAndVideos.Domain.Entities;
 
-public class OrderItem : BaseEntity<int>
+public class Membership : BaseEntity<int>
 {
+    public MembershipType MembershipType { get; private set; }
+    
+    public Membership(int id, MembershipType productType)
+    {
+        Id = Id;
+        MembershipType = productType;
+    }
 }

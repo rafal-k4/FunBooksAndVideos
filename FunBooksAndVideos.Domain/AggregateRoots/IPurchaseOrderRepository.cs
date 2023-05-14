@@ -3,5 +3,5 @@
 public interface IPurchaseOrderRepository
 {
     public Task<PurchaseOrder> Get(int id);
-    public Task SaveChangesAsync(CancellationToken cancellationToken);
+    public Task CreateAsync(PurchaseOrder purchaseOrder, CancellationToken cancellationToken);
 }
