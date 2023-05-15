@@ -1,4 +1,5 @@
 ﻿using FunBooksAndVideos.Domain.AggregateRoots.PurchaseOrder;
+using Microsoft.EntityFrameworkCore;
 
 namespace FunBooksAndVideos.Infrastructure.Repositories;
 
@@ -19,6 +20,7 @@ public class PurchaseOrderRepository : IPurchaseOrderRepository
 
     public async Task<PurchaseOrder?> GetAsync(int id, CancellationToken cancellationToken)
     {
+        _dbContext.PurchaseOrders.Include(x => x.ItemLines);
         return await _dbContext.PurchaseOrders.FindAsync(id, cancellationToken);
     }
 }

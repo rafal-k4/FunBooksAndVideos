@@ -2,7 +2,7 @@
 
 namespace FunBooksAndVideos_eCommerceShop.Endpoints.PurchaseOrder;
 
-public class CreatePurchaseOrderRequest
+public record CreatePurchaseOrderRequest
 {
     public int Purchaseorder { get; set; }
     public decimal Total { get; set; }
