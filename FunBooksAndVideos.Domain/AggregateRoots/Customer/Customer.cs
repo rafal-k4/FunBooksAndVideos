@@ -5,7 +5,8 @@ namespace FunBooksAndVideos.Domain.AggregateRoots.Customer;
 
 public class Customer : BaseEntity<int>, IAggregateRoot
 {
-    public List<Membership> Memberships { get; set; } = new();
+    private List<Membership> _memberships { get; set; } = new();
+    public IEnumerable<Membership> Memberships => _memberships.AsEnumerable();
 
     public bool IsPremiumMemberShip
         => Memberships.Any(x => x.MembershipType == MembershipType.Premium) ||
@@ -23,7 +24,7 @@ public class Customer : BaseEntity<int>, IAggregateRoot
         if (membershipName.Contains("book club", StringComparison.OrdinalIgnoreCase))
         {
             if (!Memberships.Any(x => x.MembershipType == MembershipType.BookClub))
-                Memberships.Add(new Membership { MembershipType = MembershipType.BookClub });
+                _memberships.Add(new Membership { MembershipType = MembershipType.BookClub });
 
             return;
         }
@@ -32,7 +33,7 @@ public class Customer : BaseEntity<int>, IAggregateRoot
         if (membershipName.Contains("video club", StringComparison.OrdinalIgnoreCase))
         {
             if (!Memberships.Any(x => x.MembershipType == MembershipType.VideoClub))
-                Memberships.Add(new Membership { MembershipType = MembershipType.VideoClub });
+                _memberships.Add(new Membership { MembershipType = MembershipType.VideoClub });
 
             return;
         }
