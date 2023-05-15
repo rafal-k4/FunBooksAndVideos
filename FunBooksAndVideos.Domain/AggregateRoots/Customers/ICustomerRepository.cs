@@ -1,4 +1,4 @@
-﻿namespace FunBooksAndVideos.Domain.AggregateRoots.Customer;
+﻿namespace FunBooksAndVideos.Domain.AggregateRoots.Customers;
 
 public interface ICustomerRepository
 {

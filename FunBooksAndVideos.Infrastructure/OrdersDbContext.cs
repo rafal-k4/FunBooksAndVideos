@@ -1,4 +1,4 @@
-﻿using FunBooksAndVideos.Domain.AggregateRoots.Customer;
+﻿using FunBooksAndVideos.Domain.AggregateRoots.Customers;
 using FunBooksAndVideos.Domain.AggregateRoots.PurchaseOrder;
 using FunBooksAndVideos.Domain.SharedKernel;
 using MediatR;
