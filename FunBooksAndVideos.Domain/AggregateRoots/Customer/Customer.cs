@@ -5,7 +5,7 @@ namespace FunBooksAndVideos.Domain.AggregateRoots.Customer;
 
 public class Customer : BaseEntity<int>, IAggregateRoot
 {
-    public List<Membership> Memberships = new();
+    public List<Membership> Memberships { get; set; } = new();
 
     public bool IsPremiumMemberShip
         => Memberships.Any(x => x.MembershipType == MembershipType.Premium) ||

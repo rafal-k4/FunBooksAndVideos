@@ -110,7 +110,7 @@ public class CreateTests : IClassFixture<CustomWebApiFactory>
             .Excluding(x => x.Events));
     }
 
-    [Fact(Skip = "Need to fix including Membership collection")]
+    [Fact]
     public async Task CreatePurchaseOrderEndpoint__Should_UpdateCustomer_Membership__When_ItemLines_Contains_Membership()
     {
         // Arrange
