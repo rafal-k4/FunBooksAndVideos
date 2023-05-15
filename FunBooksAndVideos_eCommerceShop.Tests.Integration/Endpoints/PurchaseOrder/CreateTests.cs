@@ -1,4 +1,4 @@
-﻿using FunBooksAndVideos.Domain.AggregateRoots.Customer;
+﻿using FunBooksAndVideos.Domain.AggregateRoots.Customers;
 using FunBooksAndVideos.Domain.Entities;
 using FunBooksAndVideos.Infrastructure;
 using FunBooksAndVideos_eCommerceShop.Endpoints.PurchaseOrder;

@@ -1,7 +1,7 @@
 ﻿using FunBooksAndVideos.Domain.Entities;
 using FunBooksAndVideos.Domain.SharedKernel;
 
-namespace FunBooksAndVideos.Domain.AggregateRoots.Customer;
+namespace FunBooksAndVideos.Domain.AggregateRoots.Customers;
 
 public class Customer : BaseEntity<int>, IAggregateRoot
 {

@@ -1,4 +1,4 @@
-﻿using FunBooksAndVideos.Domain.AggregateRoots.Customer;
+﻿using FunBooksAndVideos.Domain.AggregateRoots.Customers;
 using MediatR;
 
 namespace FunBooksAndVideos.Application.Commands

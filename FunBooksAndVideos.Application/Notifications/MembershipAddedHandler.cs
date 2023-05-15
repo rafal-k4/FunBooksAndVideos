@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using FunBooksAndVideos.Domain.DomainEvents;
-using FunBooksAndVideos.Domain.AggregateRoots.Customer;
+using FunBooksAndVideos.Domain.AggregateRoots.Customers;
 using FunBooksAndVideos.Application.Commands;
 
 namespace FunBooksAndVideos.Application.Notifications;

@@ -27,9 +27,14 @@ public class PurchaseOrder : BaseEntity<int>, IAggregateRoot
             {
                 Events.Add(new MembershipPurchasedEvent(item, CustomerId));
                 continue;
+            } else if(item.Contains("book", StringComparison.OrdinalIgnoreCase) || item.Contains("video", StringComparison.OrdinalIgnoreCase))
+            {
+                ItemLines.Add(new Product(item));
             }
-
-            ItemLines.Add(new Product(item));
+            else
+            {
+                throw new ArgumentException($"invalid item input: '{item}'");
+            }
         }
     }
 }
