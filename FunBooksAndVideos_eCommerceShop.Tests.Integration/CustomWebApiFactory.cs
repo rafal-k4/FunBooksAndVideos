@@ -22,14 +22,4 @@ public class CustomWebApiFactory : WebApplicationFactory<IEntryPointMarker>
         });
         base.ConfigureWebHost(builder);
     }
-
-    //public Task InitializeAsync()
-    //{
-    //    return Task.CompletedTask;
-    //}
-
-    //Task IAsyncLifetime.DisposeAsync()
-    //{
-    //    return Task.CompletedTask;
-    //}
 }
